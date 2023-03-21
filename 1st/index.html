@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: orange;
+        background-image: url("/1st/cancha3.png");
+        background-repeat: no-repeat;
+        background-size: auto;
+        font-style: oblique;
+        color: brown;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+    }
+
+    h1 {
+        color: red;
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+        
+        
+    }
+
+    input {
+
+      background-color: bisque;
+  border-color: solid 1px brown;
+  color: brown;
+  border-radius: 10px;
+
+    }
+
+   
+
+    #balon {
+        margin-top: 320px;
+        margin-left: 100px;
+        animation: bounce 1s ease-in-out infinite alternate;
+       transition: transform 1s ease-in;
+       
+
+    }
+
+    .imagenBalon {
+      margin-top: 320px;;
+    }
+
+  
+.mover {
+  transform:  translateY(-500px) translateX(663px) ;
+ animation-duration: 3s;
+}
+
+
+    @keyframes bounce {
+        
+          from {
+              transform: translateY(40);
+          }
+          to {
+              transform: translateY(-400px);
+          }
+      }
+
+ 
+
+/* CSS FOR SCORE */
+
+    .table {
+  display: table; /* set the display property to table */
+  /* border-collapse: collapse; optional: remove border spacing */
+  margin-left: 1000px;
+}
+
+.table-header {
+  display: table-header-group; /* set the display property to table-header-group */
+  font-weight: bold; /* optional: make the header text bold */
+}
+
+.table-row {
+  display: table-row; /* set the display property to table-row */
+}
+
+.table-cell {
+  display: table-cell; /* set the display property to table-cell */
+  padding: 5px; /* add padding for visual separation */
+  border: 1px solid brown; /* add a border for visual separation */
+}
+
+/* CSS FOR X ROJA */
+
+#xRoja {
+  width: 50px;
+  height:50px;
+  position: relative;
+  display: none;
+  align-items: center;
+  margin-bottom: 50%;
+  margin-left: 50%;
+  margin-right: 50%;
+  
+
+  
+}
+
+#xRoja::before,
+#xRoja::after {
+  content: "";
+
+  position: absolute;
+  align-items: center;
+  margin-top: 50px;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 75px;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#xRoja::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+
+}
+
+
+#operaciones {
+  column-count: 4;
+ 
+}
+
+button {
+
+  background-color: bisque;
+  border-color: solid 1px brown;
+  color: brown;
+  border-radius: 10px;
+
+}
+
+#banner {
+
+  color: rgb(62, 28, 229);
+  font-size: 10cm;
+  align-items: center;
+  display: none;
+  /* margin-left: 50%; */
+
+
+}
+
+
+
+
+
+
+</style>
+
+<body>
+
+    <!-- TITULO -->
+
+    <h1>MATH BASKETBALL MINI GAME</h1>
+<div id="xRoja"></div>
+
+
+<div id="banner">
+<div id="ready"><h2>READY</h2></div>
+<div id="set"><h2>SET</h2></div>
+<div id="go"><h2>GO!</h2></div>
+</div>
+<!-- SCORE -->
+
+    <div class="table">
+        <div class="table-header">
+            <div id="score"><h2>SCORE</h2></div>
+        </div>
+        
+       
+        <div class="table-cell">
+            <div id="hits">HITS</div><br>
+            <div id="mistakes">MISTAKES</div>
+        </div> 
+        <div class="table-cell">
+            <div id="hitsResult">0</div><br>
+            <div id="mistakesResult">0</div>
+        </div>
+      </div>
+
+
+      
+
+
+     
+ <img src="balon4.png" id="balon"  width="75px" height="75px">
+
+
+ <div id="operaciones">
+
+ <form>
+    <label for="respuesta">9 X 1 = </label>
+    <input type="number" id="respuesta" name="respuesta">
+    <button id="submit" type="submit">PLAY</button>
+  </form>
+
+  <form1>
+    <label for="respuesta">9 X 2 = </label>
+    <input type="number" id="flor" name="flor">
+    <button id="playFlor" type="submit">PLAY</button>
+  </form1><br>
+
+  <form2>
+    <label for="respuesta">9 X 3 = </label>
+    <input type="number" id="mesa" name="mesa">
+    <button id="playMesa" type="submit">PLAY</button>
+  </form2><br>
+
+  <form3>
+    <label for="respuesta">9 X 4 = </label>
+    <input type="number" id="respuesta4" name="respuesta4">
+    <button id="playRespuesta4" type="submit">PLAY</button>
+  </form3><br>
+
+  <form4>
+    <label for="respuesta">9 X 5 = </label>
+    <input type="number" id="respuesta5" name="respuesta5">
+    <button id="playRespuesta5" type="submit">PLAY</button>
+  </form4><br>
+
+  <form5>
+    <label for="respuesta">9 X 6 = </label>
+    <input type="number" id="respuesta6" name="respuesta6">
+    <button id="playRespuesta6" type="submit">PLAY</button>
+  </form5><br>
+
+  <form6>
+    <label for="respuesta">9 X 7 = </label>
+    <input type="number" id="respuesta7" name="respuesta7">
+    <button id="playRespuesta7" type="submit">PLAY</button>
+  </form6><br>
+
+  <form7>
+    <label for="respuesta">9 X 8 = </label>
+    <input type="number" id="respuesta8" name="respuesta8">
+    <button id="playRespuesta8" type="submit">PLAY</button>
+  </form7><br>
+
+  <form8>
+    <label for="respuesta">9 X 9 = </label>
+    <input type="number" id="respuesta9" name="respuesta9">
+    <button id="playRespuesta9" type="submit">PLAY</button>
+  </form8><br>
+
+  <form9>
+    <label for="respuesta">9 X 10 = </label>
+    <input type="number" id="respuesta10" name="respuesta10">
+    <button id="playRespuesta10" type="submit">PLAY</button>
+  </form9><br>
+
+  <form10>
+    <label for="respuesta">9 X 11 = </label>
+    <input type="number" id="respuesta11" name="respuesta11">
+    <button id="playRespuesta11" type="submit">PLAY</button>
+  </form10><br>
+
+  <form11>
+    <label for="respuesta">9 X 12 = </label>
+    <input type="number" id="respuesta12" name="respuesta12">
+    <button id="playRespuesta12" type="submit">PLAY</button>
+  </form11><br>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
