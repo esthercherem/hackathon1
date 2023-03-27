@@ -1,0 +1,3 @@
+Finalizar el juego una vez que se completen los ejercicios. Puede ser con un recuadro dando una indicación para generar resolución. 
+
+Incrementar el sistema agregando a partir de la tabla del 0 al 9.  
